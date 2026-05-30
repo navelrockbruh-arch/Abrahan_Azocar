@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección Juegos</title>
+<link rel="stylesheet" href="estilysh.css">
+
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: radial-gradient(circle at top, #0b1a3a, #050814);
+color: white;
+}
+
+.stars {
+position: fixed;
+width: 100%;
+height: 100%;
+background-image: radial-gradient(white 1px, transparent 1px);
+background-size: 50px 50px;
+opacity: 0.15;
+animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+from { transform: translateY(0); }
+to { transform: translateY(-500px); }
+}
+
+header {
+display: flex;
+justify-content: space-between;
+padding: 20px 40px;
+background: rgba(0,0,0,0.4);
+backdrop-filter: blur(10px);
+position: relative;
+z-index: 2;
+}
+
+.logo {
+font-weight: bold;
+color: #00c8ff;
+}
+
+nav a {
+color: white;
+margin-left: 15px;
+text-decoration: none;
+}
+
+.lesson-hero {
+text-align: center;
+padding: 60px 20px;
+position: relative;
+z-index: 2;
+}
+
+.btn-primary {
+background: #00c8ff;
+padding: 10px 20px;
+border-radius: 8px;
+color: black;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+margin-top: 15px;
+transition: 0.3s;
+}
+
+.btn-primary:hover {
+transform: scale(1.05);
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+padding: 40px;
+position: relative;
+z-index: 2;
+}
+
+.card {
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(10px);
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0,200,255,0.15);
+}
+
+.card h3 {
+color: #00c8ff;
+}
+
+.preview {
+background: rgba(0,0,0,0.3);
+padding: 10px;
+border-radius: 8px;
+margin-top: 10px;
+}
+
+.game {
+padding: 10px;
+background: #111;
+border-radius: 6px;
+text-align: center;
+font-weight: bold;
+color: #00ff88;
+}
+
+pre {
+background: #0a0a0a;
+padding: 10px;
+border-radius: 8px;
+overflow-x: auto;
+color: #ccc;
+border-left: 3px solid #00c8ff;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+<div class="logo">🚀 SpaceCode Academy</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="login.html">Acceso</a>
+</nav>
+</header>
+
+<section class="lesson-hero">
+<h1>🎮 Desarrollo de Videojuegos</h1>
+<p>
+Aprende a crear videojuegos con Unity y C# como en la industria real.
+</p>
+
+<a href="index.html" class="btn-primary">← Volver</a>
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>🎯 ¿Qué es Unity?</h3>
+
+<p>
+Unity es un motor profesional usado para crear juegos 2D y 3D.
+</p>
+
+<div class="preview">
+<div class="game">
+Jugador → → → Meta
+</div>
+</div>
+
+<pre>
+using UnityEngine;
+
+public class Player : MonoBehaviour
+{
+    void Update()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime);
+    }
+}
+</pre>
+
+</div>
+
+<div class="card">
+
+<h3>💥 Colisiones</h3>
+
+<p>
+Detecta cuando dos objetos chocan dentro del juego.
+</p>
+
+<pre>
+void OnCollisionEnter(Collision col)
+{
+    Debug.Log("Colisión detectada");
+}
+</pre>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Idea clave</h3>
+
+<p>
+Un videojuego se construye con:
+- Escenas
+- Objetos
+- Scripts
+- Física
+</p>
+
+</div>
+
+</section>
+
+</body>
+</html>

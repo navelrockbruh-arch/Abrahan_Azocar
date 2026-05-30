@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección Web</title>
+<link rel="stylesheet" href="estilysh.css">
+
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: radial-gradient(circle at top, #0b1a3a, #050814);
+color: white;
+}
+
+.stars {
+position: fixed;
+width: 100%;
+height: 100%;
+background-image: radial-gradient(white 1px, transparent 1px);
+background-size: 50px 50px;
+opacity: 0.15;
+animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+from { transform: translateY(0); }
+to { transform: translateY(-500px); }
+}
+
+header {
+display: flex;
+justify-content: space-between;
+padding: 20px 40px;
+background: rgba(0,0,0,0.4);
+backdrop-filter: blur(10px);
+position: relative;
+z-index: 2;
+}
+
+.logo {
+color: #00c8ff;
+font-weight: bold;
+}
+
+nav a {
+color: white;
+margin-left: 15px;
+text-decoration: none;
+}
+
+.lesson-hero {
+text-align: center;
+padding: 60px 20px;
+position: relative;
+z-index: 2;
+}
+
+.btn-primary {
+background: #00c8ff;
+padding: 10px 20px;
+border-radius: 8px;
+color: black;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+margin-top: 15px;
+transition: 0.3s;
+}
+
+.btn-primary:hover {
+transform: scale(1.05);
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+padding: 40px;
+position: relative;
+z-index: 2;
+}
+
+.card {
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(10px);
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0,200,255,0.15);
+}
+
+.card h3 {
+color: #00c8ff;
+}
+
+.preview {
+background: rgba(0,0,0,0.3);
+padding: 10px;
+border-radius: 8px;
+margin-top: 10px;
+}
+
+.browser {
+background: #111;
+padding: 10px;
+border-radius: 8px;
+border-top: 3px solid #00c8ff;
+}
+
+pre {
+background: #0a0a0a;
+padding: 12px;
+border-radius: 8px;
+overflow-x: auto;
+border-left: 3px solid #00c8ff;
+color: #ccc;
+}
+
+.tag {
+color: #00ff88;
+font-weight: bold;
+}
+
+.code-title {
+color: #aaa;
+font-size: 13px;
+margin-bottom: 5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+<div class="logo">🚀 SpaceCode Academy</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="login.html">Acceso</a>
+</nav>
+</header>
+
+<section class="lesson-hero">
+<h1>🌐 Desarrollo Web: Fundamentos</h1>
+<p>
+Aprende a construir páginas web modernas con HTML, CSS y JavaScript desde cero.
+</p>
+
+<a href="index.html" class="btn-primary">← Volver</a>
+</section>
+
+<section class="cards">
+
+<!-- HTML -->
+<div class="card">
+
+<h3>🧱 ¿Qué es HTML?</h3>
+
+<p>
+HTML es la estructura de una página web. Es como el esqueleto.
+</p>
+
+<div class="preview">
+<div class="code-title">Vista en navegador:</div>
+<div class="browser">
+<h1 class="tag">Título de la página</h1>
+<p>Este es un párrafo</p>
+</div>
+</div>
+
+<div class="code-title">Código:</div>
+<pre>
+&lt;h1&gt;Título de la página&lt;/h1&gt;
+&lt;p&gt;Este es un párrafo&lt;/p&gt;
+</pre>
+
+</div>
+
+<!-- CSS -->
+<div class="card">
+
+<h3>🎨 ¿Qué es CSS?</h3>
+
+<p>
+CSS se usa para darle estilo a la página: colores, tamaños y diseño.
+</p>
+
+<div class="preview">
+<div class="browser">
+<h1 style="color:#00c8ff;">Hola Mundo</h1>
+</div>
+</div>
+
+<div class="code-title">Código CSS:</div>
+<pre>
+h1 {
+color: #00c8ff;
+font-size: 30px;
+}
+</pre>
+
+</div>
+
+<!-- JS -->
+<div class="card">
+
+<h3>⚡ ¿Qué es JavaScript?</h3>
+
+<p>
+JavaScript agrega interacción y lógica a la página web.
+</p>
+
+<div class="preview">
+<button onclick="alert('Hola desde JavaScript 🚀')">
+Haz clic aquí
+</button>
+</div>
+
+<div class="code-title">Código:</div>
+<pre>
+alert("Hola desde JavaScript");
+</pre>
+
+</div>
+
+</section>
+
+</body>
+</html>

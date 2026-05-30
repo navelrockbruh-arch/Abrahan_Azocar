@@ -1,0 +1,323 @@
+/* =========================
+   🎨 VARIABLES GLOBALES
+========================= */
+:root{
+--space-black:#020617;
+--space-dark:#081120;
+
+--neon-blue:#00c8ff;
+--electric-blue:#2563eb;
+--cyan:#22d3ee;
+
+--glass:rgba(255,255,255,0.05);
+--border:rgba(0,200,255,0.25);
+}
+
+/* =========================
+   RESET
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+color:white;
+overflow-x:hidden;
+background:
+radial-gradient(circle at 20% 20%, rgba(0,150,255,.25), transparent 30%),
+radial-gradient(circle at 80% 70%, rgba(0,255,255,.15), transparent 35%),
+linear-gradient(180deg, var(--space-black), var(--space-dark));
+}
+
+/* =========================
+   🌌 ESTRELLAS
+========================= */
+.stars{
+position:fixed;
+inset:0;
+z-index:-2;
+background-image:radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:.25;
+animation:twinkle 6s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:.6;}
+}
+
+/* =========================
+   🪐 PLANETAS
+========================= */
+.planet{
+position:fixed;
+border-radius:50%;
+z-index:-1;
+}
+
+.planet1{
+width:260px;
+height:260px;
+top:80px;
+right:-90px;
+background:radial-gradient(circle at 30% 30%, #4fc3f7, #020617);
+box-shadow:0 0 80px var(--neon-blue);
+}
+
+.planet2{
+width:160px;
+height:160px;
+bottom:60px;
+left:-50px;
+background:radial-gradient(circle at 30% 30%, #22d3ee, #020617);
+box-shadow:0 0 60px var(--cyan);
+}
+
+/* =========================
+   🧭 HEADER
+========================= */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(2,6,23,.75);
+backdrop-filter:blur(15px);
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+
+.logo{
+font-size:1.6rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--neon-blue);
+text-shadow:0 0 20px var(--neon-blue);
+}
+
+/* =========================
+   🔗 NAV
+========================= */
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--cyan);
+}
+
+.login-btn{
+padding:10px 18px;
+background:linear-gradient(45deg,var(--electric-blue),var(--neon-blue));
+border-radius:8px;
+}
+
+/* =========================
+   🧠 HERO
+========================= */
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:3.5rem;
+text-shadow:0 0 20px rgba(0,200,255,.4);
+}
+
+.hero p{
+margin-top:20px;
+opacity:.85;
+max-width:700px;
+}
+
+/* =========================
+   🔘 BOTONES
+========================= */
+.btn-primary{
+display:inline-block;
+margin-top:25px;
+padding:15px 30px;
+background:linear-gradient(45deg,var(--electric-blue),var(--neon-blue));
+color:white;
+text-transform:uppercase;
+border-radius:10px;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 0 30px var(--neon-blue);
+}
+
+/* =========================
+   📦 CARDS
+========================= */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:80px 10%;
+}
+
+.card{
+background:var(--glass);
+backdrop-filter:blur(20px);
+border:1px solid var(--border);
+border-radius:20px;
+padding:30px;
+transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:var(--cyan);
+}
+
+.card h3{
+color:var(--cyan);
+margin-bottom:15px;
+}
+
+/* =========================
+   🖥 PREVIEW
+========================= */
+.preview{
+margin-top:15px;
+padding:10px;
+border:1px solid var(--border);
+border-radius:10px;
+background:rgba(0,0,0,.3);
+}
+
+.browser{
+background:white;
+color:black;
+padding:10px;
+border-radius:5px;
+}
+
+/* =========================
+   📱 MOBILE SIM
+========================= */
+.mobile{
+width:120px;
+height:200px;
+border:2px solid var(--neon-blue);
+border-radius:15px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.screen{
+color:var(--neon-blue);
+}
+
+/* =========================
+   🎮 GAME BLOCK
+========================= */
+.game{
+color:var(--cyan);
+font-weight:bold;
+padding:10px;
+}
+
+/* =========================
+   🔐 LOGIN
+========================= */
+.login-container{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.login-card{
+width:420px;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(20px);
+border:1px solid var(--neon-blue);
+padding:40px;
+border-radius:20px;
+}
+
+.login-card h1{
+text-align:center;
+color:var(--neon-blue);
+}
+
+body{
+padding-top:80px;
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+align-items:stretch;
+}
+
+table{
+width:100%;
+max-width:900px;
+margin:auto;
+border-collapse:collapse;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(10px);
+border-radius:10px;
+overflow:hidden;
+}
+
+th, td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+th{
+background:rgba(0,200,255,0.15);
+color:#00c8ff;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+max-width:800px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2.2rem;
+color:#00c8ff;
+}
