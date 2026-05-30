@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lección Apps</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial;
+background: radial-gradient(circle at top, #0b1a3a, #050814);
+color: white;
+}
+
+.stars {
+position: fixed;
+width: 100%;
+height: 100%;
+background-image: radial-gradient(white 1px, transparent 1px);
+background-size: 50px 50px;
+opacity: 0.15;
+animation: moveStars 60s linear infinite;
+}
+
+@keyframes moveStars {
+from { transform: translateY(0); }
+to { transform: translateY(-500px); }
+}
+
+header {
+display: flex;
+justify-content: space-between;
+padding: 20px 40px;
+background: rgba(0,0,0,0.4);
+backdrop-filter: blur(10px);
+position: relative;
+z-index: 2;
+}
+
+.logo {
+color: #00c8ff;
+font-weight: bold;
+}
+
+nav a {
+color: white;
+margin-left: 15px;
+text-decoration: none;
+}
+
+.lesson-hero {
+text-align: center;
+padding: 60px 20px;
+position: relative;
+z-index: 2;
+}
+
+.btn-primary {
+background: #00c8ff;
+padding: 10px 20px;
+border-radius: 8px;
+color: black;
+text-decoration: none;
+font-weight: bold;
+display: inline-block;
+margin-top: 15px;
+transition: 0.3s;
+}
+
+.btn-primary:hover {
+transform: scale(1.05);
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 20px;
+padding: 40px;
+position: relative;
+z-index: 2;
+}
+
+.card {
+background: rgba(255,255,255,0.08);
+backdrop-filter: blur(10px);
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(0,200,255,0.15);
+}
+
+.card h3 {
+color: #00c8ff;
+}
+
+pre {
+background: #0a0a0a;
+padding: 10px;
+border-radius: 8px;
+overflow-x: auto;
+border-left: 3px solid #00c8ff;
+color: #ccc;
+}
+
+.mobile {
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.phone {
+width: 160px;
+height: 280px;
+border-radius: 20px;
+border: 2px solid #00c8ff;
+background: #111;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 0 20px rgba(0,200,255,0.3);
+}
+
+.screen {
+color: #00ff88;
+font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<header>
+<div class="logo">🚀 SpaceCode Academy</div>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="login.html">Acceso</a>
+</nav>
+</header>
+
+<section class="lesson-hero">
+<h1>📱 Desarrollo de Aplicaciones</h1>
+<p>
+Aprende a crear apps móviles modernas con Flutter paso a paso.
+</p>
+
+<a href="index.html" class="btn-primary">← Volver</a>
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>🚀 ¿Qué es Flutter?</h3>
+
+<p>
+Flutter es un framework de Google para crear apps móviles multiplataforma con un solo código.
+</p>
+
+<div class="mobile">
+<div class="phone">
+<div class="screen">Hola App 📱</div>
+</div>
+</div>
+
+<pre>
+import 'package:flutter/material.dart';
+
+void main() {
+runApp(MaterialApp(
+home: Text("Hola App")
+));
+}
+</pre>
+
+</div>
+
+<div class="card">
+
+<h3>🧩 Widgets</h3>
+
+<p>
+Los widgets son los bloques básicos para construir interfaces en Flutter.
+</p>
+
+<pre>
+Text("Hola Mundo")
+
+ElevatedButton(
+onPressed: () {},
+child: Text("Botón")
+)
+</pre>
+
+</div>
+
+<div class="card">
+
+<h3>💡 Idea clave</h3>
+
+<p>
+En Flutter todo es un widget: texto, botones, layouts y pantallas completas.
+</p>
+
+</div>
+
+</section>
+
+</body>
+</html>
